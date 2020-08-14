@@ -18,9 +18,9 @@ body {
     height: 70vh;
     background-image: linear-gradient(
         to top, 
-        rgba(28, 26, 46, 0.6), 
-        rgba(28, 26, 46, 0.6)),
-    url(./images/hero.jpg.jpg);
+        rgba(30, 30, 70, 0.801), 
+        rgba(30, 30, 70, 0.801)),
+    url(./images/hero.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -55,6 +55,8 @@ h1 {
     font-size: 1.4em;
     text-transform: uppercase;
     letter-spacing: 7px;
+
+    animation: fade 2s ease-out;
 }
 
 .heading-secondary {
@@ -62,5 +64,35 @@ h1 {
     font-family: 'Roboto Mono', monospace; 
     font-weight: 300;
     font-size: 0.8em;
+
+    animation: fadeDown 1.5s ease-out;
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    90% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
 }
 

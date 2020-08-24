@@ -1,16 +1,31 @@
+/* colors */
+/* 
+charcoal: #1b1b1b
+darkBlue: #25315A
+blue: #467298
+lightBlue: #ABE3E3
+offWhite: #F9F5F1
+peach: #E78B71
+*/
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: "Lato", sans-serif; 
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     /* color: white; */
     /* line-height: 1.7; */
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 .header {
@@ -18,23 +33,32 @@ body {
     height: 70vh;
     background-image: linear-gradient(
         to top, 
-        rgba(30, 30, 70, 0.801), 
-        rgba(30, 30, 70, 0.801)),
+        #25315a, 
+        #467298cc),
     url(./images/hero.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    /* z-index: -1; */
 }
 
 .logo-box {
     position: absolute;
-    top: 30px;
-    left: 50px;
+    top: 3rem;
+    left: 5rem;
 }
 
+
 .logo-text {
+    font-size: 1.5rem;
     font-weight: 300;
     color: white;
     text-transform: uppercase;
+}
+
+.logo-box .logo-text:hover {
+    color: #25315A !important;
+    border-bottom: .1rem solid #25315A;
 }
 
 h1 {
@@ -52,30 +76,32 @@ h1 {
 .heading-primary {
     display: block;
     font-weight: 300;
-    font-size: 1.4em;
+    font-size: 5rem;
     text-transform: uppercase;
-    letter-spacing: 7px;
-
-    animation: fade 2s ease-out;
+    letter-spacing: .7rem;
+    /* border-bottom: .1rem solid white; */
+    animation: fadeUp 1s ease-out;
 }
 
 .heading-secondary {
     display: block;
     font-family: 'Roboto Mono', monospace; 
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 2.8rem;
+    letter-spacing: .4rem;
 
-    animation: fadeDown 1.5s ease-out;
+
+    animation: fadeDown 1s ease-out;
 }
 
 @keyframes fadeDown {
     0% {
         opacity: 0;
-        transform: translateY(-25px);
+        transform: translateY(-1.5rem);
     }
 
     90% {
-        transform: translateY(2px);
+        transform: translateY(.2rem);
     }
 
     100% {
@@ -85,14 +111,22 @@ h1 {
     }
 }
 
-@keyframes fade {
+@keyframes fadeUp {
     0% {
         opacity: 0;
+        transform: translateY(1.5rem);
+    }
+
+    90% {
+        transform: translateY(-.2rem);
     }
 
     100% {
         opacity: 1;
+        transform: translateY(0);
 
     }
 }
+
+
 

@@ -9,7 +9,9 @@ peach: #E78B71
 */
 
 
-* {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -28,9 +30,54 @@ body {
     /* padding: 30px; */
 }
 
+.nav-container {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-box {
+    padding: 1rem;
+    margin-left: 2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    /* vertical-align: middle; */
+}
+
+.nav-item-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: 2rem;
+    /* float: left; */
+    /* align-self: flex-end; */
+}
+
+.nav-item {
+    list-style: none;
+    padding: 0 2rem;
+    font-weight: 300;
+}
+
+.nav-item-link {
+    text-decoration: none;
+    color: white;
+    height: 5rem;
+}
+
+#resume-link {
+    border: .1rem solid white;
+    border-radius: .3rem;
+    padding: 1rem;
+}
+
 .header {
     position: relative;
-    height: 70vh;
+    height: 100vh;
     background-image: linear-gradient(
         to top, 
         #25315a, 
@@ -42,24 +89,10 @@ body {
     /* z-index: -1; */
 }
 
-.logo-box {
-    position: absolute;
-    top: 3rem;
-    left: 5rem;
-}
-
-
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: white;
-    text-transform: uppercase;
-}
-
-.logo-box .logo-text:hover {
-    color: #25315A !important;
+/* .logo-box .logo-text:hover {
+    color: #25315A;
     border-bottom: .1rem solid #25315A;
-}
+} */
 
 h1 {
     color: white;
@@ -128,5 +161,115 @@ h1 {
     }
 }
 
+.sections-container {
+    width: 60%;
+    margin: 4rem auto;
+}
 
+.section {
+    margin: 20rem 0;
+}
+
+.section-header-container {
+    margin: 3rem 0;
+}
+
+.section-header {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    border-bottom: .1rem solid #1b1b1b;
+    padding-bottom: 3rem;
+}
+
+.content-text {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9F5F1;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.skills-category {
+
+}
+
+.skills-category-label {
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.skills-category-item {
+    list-style: none;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #E78B71;
+    margin-bottom: .5rem;
+}
+
+.project-container {
+    display: flex;
+    background-color: #F9F5F1;
+    padding: 1.5rem;
+    margin: 5rem 0;
+}
+
+.project-image {
+    background-image: url(./screenshots/receta.png);
+    height: 20rem;
+    min-width: 40%;
+    background-position: center;
+    background-size: cover;
+    border: .1rem solid #E78B71;
+}
+
+.project-info {
+    padding: 0 .7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-info-header {
+    color: #E78B71;
+}
+
+.project-info-description {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.project-info-technologies {
+    /* border-top: .1rem solid #ABE3E3; */
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+}
+
+.info-tech-list {
+    display: flex;
+    align-items: center;
+}
+
+.info-tech-item {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    border: .1rem solid #E78B71;
+    border-radius: .3rem;
+    list-style: none;
+    color: #E78B71;
+    padding: .15rem;
+    margin: .5rem;
+    text-align: center;
+    /* background-color: #ABE3E3; */
+}
 

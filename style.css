@@ -1,6 +1,7 @@
 /* colors */
 /* 
 charcoal: #1b1b1b
+light-charcoal: #1b1b1b
 darkBlue: #25315A
 blue: #467298
 lightBlue: #ABE3E3
@@ -25,6 +26,7 @@ body {
     font-family: "Lato", sans-serif; 
     font-weight: 400;
     font-size: 1.6rem;
+    color: #1b1b1b;
     /* color: white; */
     /* line-height: 1.7; */
     /* padding: 30px; */
@@ -63,16 +65,28 @@ body {
     font-weight: 300;
 }
 
+/* .nav-item:hover {
+    color: #ABE3E3;
+} */
+
 .nav-item-link {
     text-decoration: none;
     color: white;
     height: 5rem;
 }
 
+.nav-item-link:hover {
+    color: #ABE3E3;
+}
+
 #resume-link {
     border: .1rem solid white;
     border-radius: .3rem;
     padding: 1rem;
+}
+
+#resume-link:hover {
+    border: .1rem solid #ABE3E3;
 }
 
 .header {
@@ -179,13 +193,14 @@ h1 {
     font-weight: 300;
     font-size: 3rem;
     letter-spacing: .5rem;
-    border-bottom: .1rem solid #1b1b1b;
+    border-bottom: .1rem solid #5a5a5a;
     padding-bottom: 3rem;
 }
 
 .content-text {
     font-family: 'Roboto Mono', monospace;
     line-height: 1.5;
+    color: #5a5a5a;
 }
 
 .skills-container {
@@ -206,6 +221,7 @@ h1 {
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 1rem;
+    color: #5a5a5a;
 }
 
 .skills-category-item {
@@ -227,10 +243,48 @@ h1 {
 .project-image {
     background-image: url(./screenshots/receta.png);
     height: 20rem;
-    min-width: 40%;
+    min-width: 350px;
     background-position: center;
     background-size: cover;
-    border: .1rem solid #E78B71;
+}
+
+.project-image:hover {
+    background-image: linear-gradient(
+        to bottom, 
+        #f9f5f1ef, 
+        #f9f5f1ef),
+        url(./screenshots/receta.png);
+} 
+
+.project-image-link-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.project-image-link {
+    text-decoration: none;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    /* display: none; */
+}
+
+.project-image-link p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #5a5a5a;
+}
+
+.fas,
+.fab {
+    font-size: 5rem;
+    color: #5a5a5a;
+    margin: 0 auto;
 }
 
 .project-info {
@@ -246,6 +300,8 @@ h1 {
 
 .project-info-description {
     font-family: 'Roboto Mono', monospace;
+    color: #5a5a5a;
+   
 }
 
 .project-info-technologies {
@@ -261,6 +317,7 @@ h1 {
 }
 
 .info-tech-item {
+    font-size: 1.3rem;
     font-weight: 400;
     font-family: 'Roboto Mono', monospace;
     border: .1rem solid #E78B71;

@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Leonard Van Riel</title>
+
+    <script src="https://kit.fontawesome.com/a15780bccc.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -18,10 +20,10 @@
             </div>
             <ul class="nav-item-container">
                 <li class="nav-item">
-                    <a class="nav-item-link" href="">Projects</a>
+                    <a class="nav-item-link" href="#projects-anchor">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a id="resume-link" class="nav-item-link" href="./pdf/Resume.pdf">Resume</a>
+                    <a id="resume-link" class="nav-item-link" href="./pdf/Resume.pdf" target="_blank">Resume</a>
                 </li>
             </ul>
         </nav>
@@ -42,7 +44,7 @@
             </div>
 
             <div class="section-content-container">
-                <p class="content-text">I'm a web developer with a passion for building software  applications that provide users with and intuitive and trouble free experience. I enjoy learning new skills that reward persistance and dedication. It's a great sense of fulfillment to show something you made/produced and for it to be admired for the  craftsmanship and diligence it requires. I aspire toward a career that will allow me to channel my creativity through crafting beautiful software and engaging experiences.</p>
+                <p class="content-text">I enjoy building software applications that provide users with an intuitive, trouble-free experience. I value persistence and dedication on the journey to learning new skills, as both a musician and web developer. There is a great sense of fulfillment in having something you produced be admired for the craftsmanship and diligence behind it. I aspire to reach a career that allows me to channel my creativity by crafting beautiful software and creating engaging online experiences.</p>
             </div>
         </div>
 
@@ -99,13 +101,46 @@
 
         <div class="section">
             <div class="section-header-container">
-                <h2 class="section-header">Projects</h2>
+                <h2 id="projects-anchor" class="section-header">Projects</h2>
             </div>
 
             <div class="section-content-container">
 
                 <div class="project-container">
-                    <div class="project-image"></div>
+
+                    <div class="project-image">
+                        <div class="project-image-link-container">
+                            <a class="project-image-link" href="https://damp-earth-44581.herokuapp.com/recipes" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <p>Visit Site</p>
+                            </a>
+                            <a class="project-image-link" href="https://github.com/SelectYes/Receta">
+                                <i class="fab fa-github"></i>
+                                <p>View Source</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-info-header">
+                            <h3>Receta.com</h3>
+                        </div>
+                        <div class="project-info-description">
+                            <p>Receta.com is a website for users to submit and view recipes. The application utilizes basic CRUD functionality and user authentication/authorisation. It was also a good opportunity to try out a different CSS framework, so I tried Materialize CSS - loved it!</p>
+                        </div>
+                        <div class="project-info-technologies">
+                            <ul class="info-tech-list">
+                                <li class="info-tech-item">JavaScript</li>
+                                <li class="info-tech-item">Materialize</li>
+                                <li class="info-tech-item">Express</li>
+                                <li class="info-tech-item">MongoDB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="project-container">
+                    <div class="project-image" href="#"></div>
                     <div class="project-info">
                         <div class="project-info-header">
                             <h3>Receta.com</h3>
@@ -142,27 +177,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-container">
-                    <div class="project-image"></div>
-                    <div class="project-info">
-                        <div class="project-info-header">
-                            <h3>Receta.com</h3>
-                        </div>
-                        <div class="project-info-description">
-                            <p>Receta.com is a website for users to submit and view recipes. The application impliments basic CRUD functionality and user authentication/authorisation. It was also a good opportunity to try out a different CSS framework, so I tried Materialize CSS - loved it!</p>
-                        </div>
-                        <div class="project-info-technologies">
-                            <ul class="info-tech-list">
-                                <li class="info-tech-item">JavaScript</li>
-                                <li class="info-tech-item">Materialize</li>
-                                <li class="info-tech-item">Express</li>
-                                <li class="info-tech-item">MongoDB</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
 
             </div>
         </div>

@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss ./style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SelectYes/portfolio.git"
+  },
+  "author": "Leonard van Riel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SelectYes/portfolio/issues"
+  },
+  "homepage": "https://github.com/SelectYes/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

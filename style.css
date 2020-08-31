@@ -27,7 +27,8 @@ body {
   font-size: 1.5rem;
   font-weight: 300;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: .05rem; }
 
 .nav-item-container {
   display: flex;
@@ -42,23 +43,25 @@ body {
 .nav-item-link {
   text-decoration: none;
   color: white;
-  height: 5rem; }
+  height: 5rem;
+  transition: all 0.2s linear; }
+  .nav-item-link:hover {
+    color: #25315A;
+    transition: all 0.2s linear; }
 
 .nav-item-border {
   border: .1rem solid white;
   border-radius: .3rem;
-  padding: 1rem; }
-
-.nav-item-border:hover {
-  border: 0.1rem solid #ABE3E3; }
-
-.nav-item-link:hover {
-  color: #ABE3E3; }
+  padding: 1rem;
+  transition: all 0.2s linear; }
+  .nav-item-border:hover {
+    border: 0.1rem solid #25315A;
+    transition: all 0.2s linear; }
 
 .header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to top, #25315A, #467298cc), url(./images/hero.jpg);
+  background-image: linear-gradient(to top, #25315a, rgba(70, 114, 152, 0.75)), url(./images/hero.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
@@ -110,12 +113,19 @@ h1 {
     opacity: 1;
     transform: translateY(0); } }
 
+.section {
+  margin: 20rem 0;
+  transform: translateX(-5%);
+  opacity: 0;
+  transition: all 1s ease-out; }
+
+.active {
+  transform: translateX(0);
+  opacity: 1; }
+
 .sections-container {
   width: 60%;
   margin: 4rem auto; }
-
-.section {
-  margin: 20rem 0; }
 
 .section-header-container {
   margin: 3rem 0; }
@@ -125,8 +135,9 @@ h1 {
   font-weight: 300;
   font-size: 3rem;
   letter-spacing: .5rem;
-  border-bottom: 0.1rem solid #5a5a5a;
-  padding-bottom: 3rem; }
+  border-bottom: 0.1rem solid #467298;
+  padding-bottom: 3rem;
+  color: #467298; }
 
 .content-text {
   font-family: 'Roboto Mono', monospace;
@@ -137,14 +148,14 @@ h1 {
 .skills-container {
   display: flex;
   justify-content: space-between;
-  background-color: #F9F5F1;
+  background-color: #dee6ee;
   padding: 1rem;
   margin-top: 4rem; }
 
 .skills-category-label {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
-  color: #5a5a5a;
+  color: #1b1b1b;
   text-transform: uppercase;
   line-height: 1.5;
   margin-bottom: 1rem; }
@@ -152,14 +163,14 @@ h1 {
 .skills-category-item {
   font-family: 'Roboto Mono', monospace;
   font-weight: 300;
-  color: #E78B71;
+  color: #25315A;
   list-style: none;
   line-height: 1.5;
   margin-bottom: .5rem; }
 
 .project-container {
   display: flex;
-  background-color: #F9F5F1;
+  background-color: #dee6ee;
   padding: 1.5rem;
   margin: 5rem 0; }
 
@@ -170,33 +181,40 @@ h1 {
   background-position: center;
   background-size: cover; }
 
-.project-image:hover {
-  background-image: linear-gradient(to bottom, #F9F5F1, #F9F5F1), url(./screenshots/receta.png); }
-
 .project-image-link-container {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  opacity: 0;
+  transition: all .2s linear; }
+  .project-image-link-container:hover {
+    opacity: 1;
+    background-color: #dee6ee;
+    transition: all .2s linear; }
 
 .project-image-link {
   text-decoration: none;
   margin: 0 4rem;
   display: flex;
   flex-direction: column; }
-
-.project-image-link p {
-  margin-top: 1rem;
-  font-size: 1rem;
-  text-align: center;
-  color: #5a5a5a; }
+  .project-image-link p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #467298; }
 
 .fas,
 .fab {
   font-size: 5rem;
-  color: #5a5a5a;
-  margin: 0 auto; }
+  color: #467298;
+  margin: 0 auto;
+  transition: all .2s linear; }
+  .fas:hover,
+  .fab:hover {
+    color: #25315A;
+    transition: all 0.5s linear; }
 
 .project-info {
   padding: 0 .7rem;
@@ -205,7 +223,7 @@ h1 {
   justify-content: space-between; }
 
 .project-info-header {
-  color: #E78B71; }
+  color: #467298; }
 
 .project-info-description {
   font-family: 'Roboto Mono', monospace;
@@ -222,10 +240,10 @@ h1 {
 
 .info-tech-item {
   font-family: 'Roboto Mono', monospace;
-  font-weight: 300;
-  color: #E78B71;
+  font-weight: 400;
+  color: #467298;
   font-size: 1.3rem;
-  border: 0.1rem solid #E78B71;
+  border: 0.1rem solid #467298;
   border-radius: .3rem;
   list-style: none;
   padding: .15rem;

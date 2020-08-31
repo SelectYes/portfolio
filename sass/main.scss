@@ -1,14 +1,17 @@
-/* colors */
-/* 
-charcoal: #1b1b1b
-light-charcoal: #1b1b1b
-darkBlue: #25315A
-blue: #467298
-lightBlue: #ABE3E3
-offWhite: #F9F5F1
-peach: #E78B71
-*/
 
+$charcoal: #1b1b1b;
+$light-charcoal: #5a5a5a;
+$dark-blue: #25315A;
+$blue: #467298;
+$light-blue: #ABE3E3;
+$off-white: #F9F5F1;
+$peach: #E78B71;
+
+@mixin content-text($color, $weight) {
+    font-family: 'Roboto Mono', monospace; 
+    font-weight: $weight;
+    color: $color;
+}
 
 *,
 *::before,
@@ -23,13 +26,10 @@ html {
 }
 
 body {
-    // font-family: "Lato", sans-serif; 
+    font-family: "Lato", sans-serif; 
     font-weight: 400;
     font-size: 1.6rem;
-    color: #1b1b1b;
-    /* color: white; */
-    /* line-height: 1.7; */
-    /* padding: 30px; */
+    color: $charcoal;
 }
 
 .nav-container {
@@ -48,15 +48,12 @@ body {
     font-weight: 300;
     color: white;
     text-transform: uppercase;
-    /* vertical-align: middle; */
 }
 
 .nav-item-container {
     display: flex;
     margin-left: auto;
     margin-right: 2rem;
-    /* float: left; */
-    /* align-self: flex-end; */
 }
 
 .nav-item {
@@ -65,28 +62,28 @@ body {
     font-weight: 300;
 }
 
-/* .nav-item:hover {
-    color: #ABE3E3;
-} */
-
 .nav-item-link {
     text-decoration: none;
     color: white;
     height: 5rem;
 }
 
-.nav-item-link:hover {
-    color: #ABE3E3;
-}
-
-#resume-link {
+.nav-item-border {
     border: .1rem solid white;
     border-radius: .3rem;
     padding: 1rem;
 }
 
-#resume-link:hover {
-    border: .1rem solid #ABE3E3;
+.nav-item-border {
+    &:hover {
+        border: .1rem solid $light-blue;
+    }
+}
+
+.nav-item-link {
+    &:hover {
+        color: $light-blue;
+    }
 }
 
 .header {
@@ -94,19 +91,14 @@ body {
     height: 100vh;
     background-image: linear-gradient(
         to top, 
-        #25315a, 
+        $dark-blue, 
         #467298cc),
     url(./images/hero.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    /* z-index: -1; */
 }
 
-/* .logo-box .logo-text:hover {
-    color: #25315A;
-    border-bottom: .1rem solid #25315A;
-} */
 
 h1 {
     color: white;
@@ -126,14 +118,12 @@ h1 {
     font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: .7rem;
-    /* border-bottom: .1rem solid white; */
     animation: fadeUp 1s ease-out;
 }
 
 .heading-secondary {
+    @include content-text(white, 300);
     display: block;
-    font-family: 'Roboto Mono', monospace; 
-    font-weight: 300;
     font-size: 2.8rem;
     letter-spacing: .4rem;
 
@@ -193,45 +183,40 @@ h1 {
     font-weight: 300;
     font-size: 3rem;
     letter-spacing: .5rem;
-    border-bottom: .1rem solid #5a5a5a;
+    border-bottom: .1rem solid $light-charcoal;
     padding-bottom: 3rem;
 }
 
 .content-text {
-    font-family: 'Roboto Mono', monospace;
+    @include content-text($light-charcoal, 400);
     line-height: 1.5;
-    color: #5a5a5a;
 }
 
 .skills-container {
     display: flex;
     justify-content: space-between;
-    background-color: #F9F5F1;
+    background-color: $off-white;
     padding: 1rem;
     margin-top: 4rem;
 }
 
 .skills-category-label {
+    @include content-text($light-charcoal, 400);
     text-transform: uppercase;
-    font-family: 'Roboto Mono', monospace;
     line-height: 1.5;
-    font-weight: 400;
     margin-bottom: 1rem;
-    color: #5a5a5a;
 }
 
 .skills-category-item {
+    @include content-text($peach, 300);
     list-style: none;
-    font-family: 'Roboto Mono', monospace;
     line-height: 1.5;
-    font-weight: 300;
-    color: #E78B71;
     margin-bottom: .5rem;
 }
 
 .project-container {
     display: flex;
-    background-color: #F9F5F1;
+    background-color: $off-white;
     padding: 1.5rem;
     margin: 5rem 0;
 }
@@ -244,12 +229,14 @@ h1 {
     background-size: cover;
 }
 
-.project-image:hover {
-    background-image: linear-gradient(
-        to bottom, 
-        #f9f5f1ef, 
-        #f9f5f1ef),
-        url(./screenshots/receta.png);
+.project-image {
+    &:hover {
+        background-image: linear-gradient(
+            to bottom, 
+            $off-white, 
+            $off-white),
+            url(./screenshots/receta.png);
+    }
 } 
 
 .project-image-link-container {
@@ -266,20 +253,22 @@ h1 {
     margin: 0 4rem;
     display: flex;
     flex-direction: column;
-    /* display: none; */
 }
 
-.project-image-link p {
-    margin-top: 1rem;
-    font-size: 1rem;
-    text-align: center;
-    color: #5a5a5a;
+.project-image-link {
+
+    p {
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        color: $light-charcoal;
+    }
 }
 
 .fas,
 .fab {
     font-size: 5rem;
-    color: #5a5a5a;
+    color: $light-charcoal;
     margin: 0 auto;
 }
 
@@ -291,20 +280,16 @@ h1 {
 }
 
 .project-info-header {
-    color: #E78B71;
+    color: $peach;
 }
 
 .project-info-description {
-    font-family: 'Roboto Mono', monospace;
-    color: #5a5a5a;
-   
+    @include content-text($light-charcoal, 400);
 }
 
 .project-info-technologies {
-    /* border-top: .1rem solid #ABE3E3; */
     display: flex;
     align-items: center;
-    /* flex-direction: row; */
 }
 
 .info-tech-list {
@@ -313,16 +298,13 @@ h1 {
 }
 
 .info-tech-item {
+    @include content-text($peach, 300);
     font-size: 1.3rem;
-    font-weight: 400;
-    font-family: 'Roboto Mono', monospace;
-    border: .1rem solid #E78B71;
+    border: .1rem solid $peach;
     border-radius: .3rem;
     list-style: none;
-    color: #E78B71;
     padding: .15rem;
     margin: .5rem;
     text-align: center;
-    /* background-color: #ABE3E3; */
 }
 

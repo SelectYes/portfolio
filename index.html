@@ -13,10 +13,10 @@
 </head>
 <body>
 
-    <header class="header">
-        <nav class="nav-container">
+    <header id="anchor-top" class="header">
+        <nav class="nav-container ">
             <div class="logo-box">
-                <h4 class="logo-text">Leonard Van Riel</h4>
+                <a class="logo-text-link" href="#anchor-top"><h4 class="logo-text">Leonard Van Riel</h4></a>
             </div>
             <ul class="nav-item-container">
                 <li class="nav-item">
@@ -33,7 +33,9 @@
             <span class="heading-primary">Hi, I'm Leonard</span>
             <span class="heading-secondary">Full-Stack Web Developer</span>
         </h1>
+        <a href="#about-section"><i id="heading-arrow" class="fas fa-chevron-down"></i></a>
     </header>
+    <div id="about-section"></div>
 
 
     <div class="sections-container">
@@ -115,7 +117,7 @@
                                 <i class="fas fa-external-link-alt"></i>
                                 <p>Visit Site</p>
                             </a>
-                            <a class="project-image-link" href="https://github.com/SelectYes/Receta">
+                            <a class="project-image-link" href="https://github.com/SelectYes/Receta" target="_blank">
                                 <i class="fab fa-github"></i>
                                 <p>View Source</p>
                             </a>
@@ -124,7 +126,7 @@
 
                     <div class="project-info">
                         <div class="project-info-header">
-                            <h3>Receta.com</h3>
+                            <a class="project-header-link" href="https://damp-earth-44581.herokuapp.com/recipes" target="_blank"><h3>Receta.com</h3></a>
                         </div>
                         <div class="project-info-description">
                             <p>Receta.com is a website for users to submit and view recipes. The application utilizes basic CRUD functionality and user authentication/authorisation. It was also a good opportunity to try out a different CSS framework, so I tried Materialize CSS - loved it!</p>
@@ -185,22 +187,62 @@
 
     </div>
 
+    <footer class="footer">
+        <div class="footer-sections-container">
+            <div class="footer-section">
+                <p class="footer-text">© Leonard van Riel 2020</p>
+            </div>
+            <div class="footer-section">
+                <a class="footer-image-link" href="https://github.com/SelectYes" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <p>Visit my Github</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
+            // INTERSECTION OBSERVER CONFIG FOR PAGE SECTIONS
 
             let options = {
                 root: null, 
                 rootMargin: "-125px 0px",
                 threshold: 0.05
+
             };
 
             let observer = new IntersectionObserver(isTouching, options);
 
             document.querySelectorAll('.section').forEach(section => {
                 observer.observe(section);
-                console.log('watching');
+                console.log('watching sections');
             });
 
+            // INTERSECTION OBSERVER CONFIG FOR NAVBAR
+
+            const header = document.querySelector('.header');
+            const navBar = document.querySelector('.nav-container');
+
+            let navOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.45
+            }
+
+            let navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        navBar.classList.add('nav-active');
+                    } else {
+                        navBar.classList.remove('nav-active');
+                    }
+                })
+            }, navOptions)
+
+            navObserver.observe(header);
+            console.log('watching header');
         });
 
         const isTouching = (entries, obs) => {

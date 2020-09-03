@@ -325,6 +325,8 @@ body {
 @media screen and (max-width: 575.98px) {
   body {
     font-size: 1.2rem; }
+  .header #heading-arrow {
+    top: 70%; }
   .logo-box .logo-text-link .logo-text {
     font-size: 1.2rem; }
   .heading-container .heading-primary {

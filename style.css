@@ -305,3 +305,20 @@ body {
     .footer-image-link p:hover {
       color: #E78B71;
       transition: all .2s linear; }
+
+@media screen and (max-width: 575.98px) {
+  body {
+    font-size: 1rem; }
+  .logo-box .logo-text-link .logo-text {
+    font-size: 1rem; }
+  .heading-container .heading-primary {
+    font-size: 3rem;
+    letter-spacing: .5rem; }
+  .heading-container .heading-secondary {
+    font-size: 2rem;
+    letter-spacing: .4rem; }
+  .section-header {
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    border-bottom: 0.1rem solid #5a5a5a;
+    padding-bottom: 3rem; } }

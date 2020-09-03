@@ -459,4 +459,40 @@ body {
 
 // MOBILE
 
+@media screen and (max-width: 575.98px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .logo-box {
+        .logo-text-link {
+            .logo-text {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .heading-container {
+
+        .heading-primary {
+            font-size: 3rem;
+            letter-spacing: .5rem;
+        }
+    
+        .heading-secondary {
+            font-size: 2rem;
+            letter-spacing: .4rem;
+        }
+    }
+
+    .section-header {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+        border-bottom: .1rem solid $light-charcoal;
+        padding-bottom: 3rem;
+    }
+
+
+}
+
 // TABLET

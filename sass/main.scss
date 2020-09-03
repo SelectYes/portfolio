@@ -482,13 +482,13 @@ body {
 
 @media screen and (max-width: 575.98px) {
     body {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .logo-box {
         .logo-text-link {
             .logo-text {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
     }
@@ -496,12 +496,12 @@ body {
     .heading-container {
 
         .heading-primary {
-            font-size: 3rem;
+            font-size: 4rem;
             letter-spacing: .5rem;
         }
     
         .heading-secondary {
-            font-size: 2rem;
+            font-size: 3rem;
             letter-spacing: .4rem;
         }
     }
@@ -521,10 +521,15 @@ body {
     }
 
     .section-header {
-        font-size: 2rem;
+        font-size: 3rem;
         letter-spacing: .5rem;
         border-bottom: .1rem solid $light-charcoal;
         padding-bottom: 3rem;
+    }
+
+    .content-text {
+        font-size: 1.6rem;
+        line-height: 1.6;
     }
 
     .skills-container {
@@ -542,6 +547,7 @@ body {
                 width: 100%;
                 border-bottom: .2rem solid white;
                 text-align: center;
+                font-size: 2rem;
             }
     
             ul {
@@ -551,6 +557,7 @@ body {
                     list-style: none;
                     line-height: 1.5;
                     margin-bottom: .5rem;
+                    font-size: 1.7rem;
                 }
             }
         }
@@ -602,7 +609,7 @@ body {
         padding: 0 0;
 
         .project-info-header {
-            font-size: 1.5rem;
+            font-size: 2rem;
             padding: 1.5rem 0;
 
             .project-image-link-container-mobile {
@@ -612,7 +619,7 @@ body {
     
         .project-info-description {
             @include content-text(white, 300);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             line-height: 2.5rem;
         }
         
@@ -661,18 +668,6 @@ body {
             font-size: 2rem;
             color: white;
             margin-right: 1rem;
-        }
-    
-        p {
-            color: white;
-            font-weight: 300;
-            text-decoration: none;
-            transition: all .2s linear;
-    
-            &:hover {
-                color: $peach;
-                transition: all .2s linear;
-            }
         }
     }
 

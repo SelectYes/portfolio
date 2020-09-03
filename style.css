@@ -324,14 +324,14 @@ body {
 
 @media screen and (max-width: 575.98px) {
   body {
-    font-size: 1rem; }
+    font-size: 1.2rem; }
   .logo-box .logo-text-link .logo-text {
-    font-size: 1rem; }
+    font-size: 1.2rem; }
   .heading-container .heading-primary {
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: .5rem; }
   .heading-container .heading-secondary {
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: .4rem; }
   .sections-container {
     width: 100%;
@@ -340,10 +340,13 @@ body {
   .section {
     margin: 7rem 2rem; }
   .section-header {
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: .5rem;
     border-bottom: 0.1rem solid #5a5a5a;
     padding-bottom: 3rem; }
+  .content-text {
+    font-size: 1.6rem;
+    line-height: 1.6; }
   .skills-container {
     display: flex;
     flex-direction: column; }
@@ -356,14 +359,16 @@ body {
         padding-bottom: 1rem;
         width: 100%;
         border-bottom: .2rem solid white;
-        text-align: center; }
+        text-align: center;
+        font-size: 2rem; }
       .skills-container .skills-category ul .skills-category-item {
         font-family: 'Roboto Mono', monospace;
         font-weight: 300;
         color: white;
         list-style: none;
         line-height: 1.5;
-        margin-bottom: .5rem; }
+        margin-bottom: .5rem;
+        font-size: 1.7rem; }
   .project-container {
     flex-direction: column;
     padding: 1rem;
@@ -396,7 +401,7 @@ body {
   .project-info {
     padding: 0 0; }
     .project-info .project-info-header {
-      font-size: 1.5rem;
+      font-size: 2rem;
       padding: 1.5rem 0; }
       .project-info .project-info-header .project-image-link-container-mobile {
         visibility: visible; }
@@ -404,7 +409,7 @@ body {
       font-family: 'Roboto Mono', monospace;
       font-weight: 300;
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       line-height: 2.5rem; }
     .project-info .project-info-technologies {
       display: flex;
@@ -434,12 +439,4 @@ body {
     .footer-image-link i {
       font-size: 2rem;
       color: white;
-      margin-right: 1rem; }
-    .footer-image-link p {
-      color: white;
-      font-weight: 300;
-      text-decoration: none;
-      transition: all .2s linear; }
-      .footer-image-link p:hover {
-        color: #E78B71;
-        transition: all .2s linear; } }
+      margin-right: 1rem; } }

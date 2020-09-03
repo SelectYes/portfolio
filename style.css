@@ -21,7 +21,8 @@ body {
   background-image: linear-gradient(to top, #25315a, rgba(70, 114, 152, 0.75)), url(./images/hero.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  width: 100%; }
   .header #heading-arrow {
     position: absolute;
     top: 90%;
@@ -86,7 +87,7 @@ body {
 
 .heading-container {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -103,7 +104,7 @@ body {
     font-weight: 300;
     color: white;
     display: block;
-    font-size: 2.8rem;
+    font-size: 3rem;
     letter-spacing: .4rem;
     animation: fadeDown 1s ease-out; }
 
@@ -129,7 +130,9 @@ body {
 
 .sections-container {
   width: 60%;
-  margin: 4rem auto; }
+  margin: 4rem auto;
+  min-width: 91.2rem;
+  max-width: 92rem; }
 
 .section {
   margin: 20rem 0;
@@ -180,7 +183,7 @@ body {
     .skills-container .skills-category ul .skills-category-item {
       font-family: 'Roboto Mono', monospace;
       font-weight: 300;
-      color: #dee6ee;
+      color: white;
       list-style: none;
       line-height: 1.5;
       margin-bottom: .5rem; }
@@ -236,20 +239,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .project-info .project-info-header {
+  .project-info .project-info-header .project-header-link {
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
     color: white; }
-    .project-info .project-info-header .project-header-link {
-      text-decoration: none;
-      color: white;
+    .project-info .project-info-header .project-header-link:hover {
+      color: #E78B71;
       transition: all .2s linear; }
-      .project-info .project-info-header .project-header-link:hover {
-        color: #E78B71;
-        transition: all .2s linear; }
   .project-info .project-info-description {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
-    color: #dee6ee;
-    font-size: 1.4rem;
+    color: white;
+    font-size: 1.5rem;
     line-height: 2.5rem; }
   .project-info .project-info-technologies {
     display: flex;
@@ -272,7 +275,8 @@ body {
 .footer {
   background-color: #292929;
   color: white;
-  height: 15rem; }
+  height: 15rem;
+  width: 100%; }
   .footer .footer-sections-container {
     display: flex;
     justify-content: center;

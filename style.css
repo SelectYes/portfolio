@@ -188,9 +188,6 @@ body {
       line-height: 1.5;
       margin-bottom: .5rem; }
 
-#projects-anchor {
-  height: 20px; }
-
 .project-container {
   display: flex;
   background-color: #467298;

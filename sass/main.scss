@@ -295,12 +295,23 @@ body {
 
 }
 
-.project-image {
+.screenshot-receta {
     background-image: url(./screenshots/receta.png);
+}
+
+.screenshot-time_bug {
+    background-image: url(./screenshots/time_bug.png);
+}
+
+.project-image {
+    // background-image: url(./screenshots/receta.png);
+    // background-image: url(./screenshots/time_bug.png);
     height: 20rem;
     min-width: 350px;
     background-position: center;
     background-size: cover;
+    border: solid white .2rem;
+    margin: 1px;
 
     .project-image-link-container {
         width: 100%;
@@ -680,5 +691,3 @@ body {
 
 
 }
-
-// TABLET

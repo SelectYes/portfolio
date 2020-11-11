@@ -409,6 +409,15 @@ body {
 
     }
 
+    .project-header {
+        @include content-text(white, 300);
+        // color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        transition: all .2s linear;
+    }
+
     .project-info-description {
         @include content-text(white, 300);
         font-size: 1.5rem;

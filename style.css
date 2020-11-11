@@ -274,6 +274,14 @@ body {
         .project-info .project-info-header .project-image-link-container-mobile .project-image-link-mobile .icon-mobile {
           font-size: 2.3rem;
           margin: .5rem 2rem; }
+  .project-info .project-header {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all .2s linear; }
   .project-info .project-info-description {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;

@@ -200,6 +200,9 @@ body {
 .screenshot-time_bug {
   background-image: url(./screenshots/time_bug.png); }
 
+.screenshot-artist_portfolio {
+  background-image: url(./screenshots/artist-portfolio.png); }
+
 .project-image {
   height: 20rem;
   min-width: 350px;
